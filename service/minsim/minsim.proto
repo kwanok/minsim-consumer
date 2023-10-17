@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package service.minsim;
+
+option go_package = "github.com/kwanok/minsim-consumer/service/minsim";
+
+service Minsim {
+  rpc NewMinsim(NewMinsimRequest) returns (NewMinsimResponse);
+}
+
+message NewMinsimRequest {
+  string type = 1;
+  float positive = 2;
+  float negative = 3;
+  float neutral = 4;
+  string content = 5;
+  string user = 6;
+  string url = 7;
+  string id = 8;
+  int64 created_at = 9;
+  string subreddit = 10;
+}
+
+message NewMinsimResponse {
+  string id = 1;
+}

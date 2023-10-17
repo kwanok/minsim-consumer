@@ -1,0 +1,13 @@
+kafka:
+  servers:
+    - localhost:9092
+  redditCommentsTopic: pg.public.reddit_comments
+  RedditSubmissionsTopic: pg.public.reddit_submissions
+
+api:
+  port: 8100
+  host: localhost
+
+inference:
+  port: 9600
+  host: http://localhost
